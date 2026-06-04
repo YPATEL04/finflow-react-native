@@ -1,0 +1,16 @@
+export const COLORS = {
+  ebonyClay: '#1F2C37',
+  santaGrey: '#9CA4AB',
+  background: '#F8FAFC',
+  white: '#FFFFFF',
+  textColor: '#1F2C37',
+  blackSqueeze: '#ECFDF5',
+  fantasy: '#FEF2F2',
+  paleSky: '#6B7280',
+  gradient1: '#57435C',
+  gradient2: '#130C2A',
+  mistBorder: '#E3E9ED',
+  positive: '#4F3D56',
+  nagative: '#A55CB8',
+  mercury: '#E5E7EB',
+};
