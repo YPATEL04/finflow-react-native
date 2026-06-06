@@ -1,17 +1,15 @@
-import React, {useEffect} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import React, { useEffect } from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import {RootStackParamList} from '../navigation/types';
+import { RootStackParamList } from '../navigation/types';
 import { IMAGES } from '../assets';
+import { COLORS } from '../assets/colors';
 
-type Props = NativeStackScreenProps<
-  RootStackParamList,
-  'Splash'
->;
+type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 
-const SplashScreen = ({navigation}: Props) => {
+const SplashScreen = ({ navigation }: Props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.replace('MainTabs');
@@ -22,12 +20,13 @@ const SplashScreen = ({navigation}: Props) => {
 
   return (
     <LinearGradient
-      colors={['#57435C', '#130C2A']}
-      start={{x: 0, y: 0}}
-      end={{x: 1, y: 1}}
-      style={styles.container}>
+      colors={[COLORS.gradient1, COLORS.gradient2]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.container}
+    >
       <View style={styles.content}>
-       <Image source={IMAGES.logo} />
+        <Image source={IMAGES.logo} />
       </View>
     </LinearGradient>
   );
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
   logo: {
     fontSize: 42,
     fontWeight: '700',
-    color: '#FFFFFF',
+    color: COLORS.white,
     letterSpacing: 1,
   },
   tagline: {

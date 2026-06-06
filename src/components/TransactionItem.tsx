@@ -36,7 +36,7 @@ const TransactionItem = ({ title, category, amount, type, date }: Props) => {
         style={[
           styles.amount,
           {
-            color: type === 'income' ? '#22C55E' : '#EF4444',
+            color: type === 'income' ? COLORS.seafoamBlue : COLORS.deepBlush,
           },
         ]}
       >
@@ -53,11 +53,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-
     paddingVertical: 16,
-
     borderBottomWidth: 1,
-    borderBottomColor: '#F1F5F9',
+    borderBottomColor: COLORS.catskillWhite,
   },
 
   leftSection: {
@@ -69,23 +67,21 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: '#F8FAFC',
-
+    backgroundColor: COLORS.background,
     justifyContent: 'center',
     alignItems: 'center',
-
     marginRight: 12,
   },
 
   title: {
     fontSize: 15,
     fontWeight: '600',
-    color: '#111827',
+    color: COLORS.textColor,
   },
 
   category: {
     fontSize: 13,
-    color: '#6B7280',
+    color: COLORS.paleSky,
     marginTop: 2,
   },
 

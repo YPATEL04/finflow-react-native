@@ -13,4 +13,13 @@ export const COLORS = {
   positive: '#4F3D56',
   nagative: '#A55CB8',
   mercury: '#E5E7EB',
+  darkLilac: '#9579A0',
+  catskillWhite: '#F1F5F9',
+  seafoamBlue: '#7DD3A7',
+  crocusPurple: '#8B6EFF',
+  tumbleweed: '#D4A574',
+  deepBlush: '#E07A8A',
+  cornflowerBlue: '#6C9FF8',
+  mediumTurquoise: '#4FD1C5',
+  platinum: '#E2E0E4',
 };

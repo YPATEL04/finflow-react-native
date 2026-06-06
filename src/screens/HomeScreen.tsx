@@ -11,7 +11,7 @@ import ScreenContent from '../components/ScreenContent';
 import BudgetProgress from '../components/BudgetProgress';
 
 const HomeScreen = () => {
-  const [hideBalance, setHideBalance] = useState(false);
+  const [hideBalance, setHideBalance] = useState(true);
   const transactions = [
     {
       id: '1',
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   },
 
   viewAll: {
-    color: '#57435C',
+    color: COLORS.gradient1,
     fontWeight: '600',
   },
 

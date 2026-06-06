@@ -20,7 +20,7 @@ export default ScreenContent;
 
 const styles = StyleSheet.create({
   content: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 24,
     paddingBottom: 30,
     flexGrow: 1,
   },
