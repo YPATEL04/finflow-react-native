@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -81,35 +75,29 @@ const profileSections = [
 ];
 
 const ProfileScreen = () => {
-  const renderMenuItem = (
-    item: {
-      title: string;
-      icon: string;
-    },
-  ) => {
+  const renderMenuItem = (item: { title: string; icon: string }) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.menuItem}>
-        
+        style={styles.menuItem}
+        key={item.title}
+      >
         <View style={styles.menuLeft}>
           <View style={styles.iconContainer}>
             <MaterialCommunityIcons
               name={item.icon}
               size={22}
-              color={'#57435C'}
+              color={COLORS.gradient1}
             />
           </View>
 
-          <Text style={styles.menuTitle}>
-            {item.title}
-          </Text>
+          <Text style={styles.menuTitle}>{item.title}</Text>
         </View>
 
         <MaterialCommunityIcons
           name="chevron-right"
           size={24}
-          color={'#A1A1AA'}
+          color={COLORS.santaGrey}
         />
       </TouchableOpacity>
     );
@@ -122,47 +110,30 @@ const ProfileScreen = () => {
       <ScreenContent>
         <View style={styles.profileCard}>
           <View style={styles.avatar}>
-            <Text style={styles.avatarText}>
-              Y
-            </Text>
+            <Text style={styles.avatarText}>Y</Text>
           </View>
-          <Text style={styles.name}>
-            Yash Patel
-          </Text>
-          <Text style={styles.email}>
-            yash@gmail.com
-          </Text>
-          <Text style={styles.memberSince}>
-            Member Since Jan 2026
-          </Text>
+          <Text style={styles.name}>Yash Patel</Text>
+          <Text style={styles.email}>yash@gmail.com</Text>
+          <Text style={styles.memberSince}>Member Since Jan 2026</Text>
         </View>
 
         {/* Sections */}
-        {profileSections.map(section => (
-          <View
-            key={section.title}
-            style={styles.sectionCard}>
-            <Text style={styles.sectionTitle}>
-              {section.title}
-            </Text>
+        {profileSections.map((section, index) => (
+          <View key={index} style={styles.sectionCard}>
+            <Text style={styles.sectionTitle}>{section.title}</Text>
             {section.data.map(renderMenuItem)}
           </View>
         ))}
 
         {/* Logout */}
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.logoutButton}>
-          
+        <TouchableOpacity activeOpacity={0.8} style={styles.logoutButton}>
           <MaterialCommunityIcons
             name="logout"
             size={22}
-            color="#FFFFFF"
+            color={COLORS.deepBlush}
           />
 
-          <Text style={styles.logoutText}>
-            Logout
-          </Text>
+          <Text style={styles.logoutText}>Logout</Text>
         </TouchableOpacity>
       </ScreenContent>
     </Container>
@@ -172,11 +143,6 @@ const ProfileScreen = () => {
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
-  content: {
-    padding: 20,
-    paddingBottom: 40,
-  },
-
   profileCard: {
     alignItems: 'center',
     borderRadius: 24,
@@ -187,13 +153,13 @@ const styles = StyleSheet.create({
     width: 90,
     height: 90,
     borderRadius: 45,
-    backgroundColor: '#57435C',
+    backgroundColor: COLORS.gradient1,
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   avatarText: {
-    color: '#FFFFFF',
+    color: COLORS.white,
     fontSize: 34,
     fontWeight: '700',
   },
@@ -207,47 +173,18 @@ const styles = StyleSheet.create({
 
   email: {
     marginTop: 6,
-    color: '#A1A1AA',
+    color: COLORS.santaGrey,
   },
 
   memberSince: {
     marginTop: 8,
-    color: '#57435C',
+    color: COLORS.gradient1,
     fontWeight: '600',
   },
 
-  summaryContainer: {
-    flexDirection: 'row',
-    marginTop: 20,
-    justifyContent: 'space-between',
-  },
-
-  summaryCard: {
-    flex: 1,
-    backgroundColor: '#1E143A',
-    borderRadius: 20,
-    paddingVertical: 20,
-    marginHorizontal: 4,
-    alignItems: 'center',
-  },
-
-  summaryValue: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: COLORS.textColor,
-  },
-
-  summaryLabel: {
-    marginTop: 4,
-    color: '#A1A1AA',
-    fontSize: 12,
-  },
-
   sectionCard: {
-    // marginTop: 20,
     borderRadius: 20,
     padding: 20,
-    // backgroundColor:'pink'
   },
 
   sectionTitle: {
@@ -273,7 +210,7 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     borderRadius: 12,
-    backgroundColor: '#2D2545',
+    backgroundColor: COLORS.platinum,
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 14,
@@ -289,15 +226,14 @@ const styles = StyleSheet.create({
     marginTop: 24,
     height: 56,
     borderRadius: 16,
-    backgroundColor: '#EF4444',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   logoutText: {
-    color: '#FFFFFF',
-    fontSize: 16,
+    color: COLORS.deepBlush,
+    fontSize: 18,
     fontWeight: '600',
     marginLeft: 8,
   },

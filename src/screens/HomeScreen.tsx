@@ -9,10 +9,22 @@ import { COLORS } from '../assets/colors';
 import TransactionItem from '../components/TransactionItem';
 import ScreenContent from '../components/ScreenContent';
 import BudgetProgress from '../components/BudgetProgress';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import {
+  fetchTransactions,
+  fetchUsers,
+} from '../store/slices/transactionSlice';
 
 const HomeScreen = () => {
+  const dispatch = useAppDispatch();
+
+  const transactions = useAppSelector(
+    state => state.transactions?.transactions,
+  );
+  const users = useAppSelector(state => state.transactions?.users);
+
   const [hideBalance, setHideBalance] = useState(true);
-  const transactions = [
+  const allTransactions = [
     {
       id: '1',
       title: 'Salary',
@@ -46,6 +58,10 @@ const HomeScreen = () => {
       date: 'Yesterday',
     },
   ];
+
+  const allApiCall = async () => {
+    const result = await dispatch(fetchUsers());
+  };
 
   return (
     <Container>
@@ -120,7 +136,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.transactionContainer}>
-          {transactions.map(item => (
+          {allTransactions.map(item => (
             <TransactionItem
               key={item.id}
               title={item.title}

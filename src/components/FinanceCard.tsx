@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Dimensions,
 } from 'react-native';
+import { COLORS } from '../assets/colors';
 
 const {width} = Dimensions.get('window');
 
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     height: 210,
     borderRadius: 24,
     padding: 24,
-    backgroundColor: '#57435C',
+    backgroundColor: COLORS.gradient1,
     marginHorizontal: 8,
     justifyContent: 'space-between',
   },

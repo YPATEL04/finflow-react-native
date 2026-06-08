@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import FinanceCard from './FinanceCard';
+import { COLORS } from '../assets/colors';
 
 const {width} = Dimensions.get('window');
 
@@ -93,6 +94,6 @@ const styles = StyleSheet.create({
 
   activeDot: {
     width: 24,
-    backgroundColor: '#57435C',
+    backgroundColor: COLORS.gradient1,
   },
 });

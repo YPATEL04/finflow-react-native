@@ -1,97 +1,340 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# FinFlow 💰
 
-# Getting Started
+A modern Personal Finance Manager mobile application built with React Native and TypeScript.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+FinFlow helps users track expenses, monitor spending habits, manage payment cards, and visualize financial data through a clean and scalable mobile experience.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📱 Overview
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+FinFlow is a portfolio project focused on demonstrating professional React Native development practices, including:
 
-```sh
-# Using npm
-npm start
+- TypeScript
+- Redux Toolkit
+- API Integration
+- Scalable Project Structure
+- Reusable Components
+- Navigation Architecture
+- Modern UI Design
 
-# OR using Yarn
-yarn start
+---
+
+## ✨ Features
+
+### 🏠 Dashboard
+- Balance overview
+- Income & expense summary
+- Recent transactions
+- Budget progress tracking
+- Quick financial insights
+
+### 📊 Statistics
+- Weekly, Monthly, and Yearly filters
+- Spending trend charts
+- Expense category breakdown
+- Financial analytics
+
+### 💳 Cards
+- Interactive card carousel
+- Multiple card management
+- Card-related quick actions
+- Recent card transactions
+
+### 👤 Profile
+- User profile information
+- App preferences
+- Security settings
+- Notification settings
+- Support & help section
+
+---
+
+## 🛠 Tech Stack
+
+### Core
+
+- React Native
+- TypeScript
+
+### State Management
+
+- Redux Toolkit
+- React Redux
+
+### Navigation
+
+- React Navigation
+- Bottom Tab Navigation
+- Native Stack Navigation
+
+### Networking
+
+- Axios
+
+### UI Libraries
+
+- React Native Vector Icons
+- React Native Linear Gradient
+- React Native Safe Area Context
+- React Native Screens
+
+---
+
+## 📂 Project Structure
+
+```text
+src
+├── api
+│   ├── client.ts
+│   └── endpoints.ts
+│
+├── assets
+│   ├── colors
+│   ├── images
+│   └── fonts
+│
+├── components
+│   ├── Header.tsx
+│   ├── Container.tsx
+│   ├── ScreenContent.tsx
+│   ├── TransactionItem.tsx
+│   └── BudgetProgress.tsx
+│
+├── navigation
+│   ├── AppNavigator.tsx
+│   ├── RootNavigator.tsx
+│   ├── MainTabNavigator.tsx
+│   └── types.ts
+│
+├── screens
+│   ├── HomeScreen.tsx
+│   ├── StatisticsScreen.tsx
+│   ├── CardsScreen.tsx
+│   └── ProfileScreen.tsx
+│
+├── services
+│   ├── transactionService.ts
+│   ├── cardService.ts
+│   └── profileService.ts
+│
+├── store
+│   ├── hooks.ts
+│   ├── index.ts
+│   └── slices
+│       ├── transactionSlice.ts
+│       ├── cardSlice.ts
+│       └── profileSlice.ts
+│
+├── utils
+│
+└── types
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🔄 State Management
 
-### Android
+Redux Toolkit is used for scalable and maintainable state management.
 
-```sh
-# Using npm
-npm run android
+Implemented with:
 
-# OR using Yarn
-yarn android
+- configureStore
+- createSlice
+- createAsyncThunk
+- Typed Hooks
+- Async API Handling
+
+Example flow:
+
+```text
+Screen
+   ↓
+Dispatch Action
+   ↓
+createAsyncThunk
+   ↓
+Service Layer
+   ↓
+API
+   ↓
+Redux Store
+   ↓
+UI Update
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 🌐 API Architecture
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+The application follows a service-based API architecture.
 
-```sh
-bundle install
+Example:
+
+```text
+Screen
+   ↓
+Redux Thunk
+   ↓
+Service Layer
+   ↓
+Axios Client
+   ↓
+Backend API
 ```
 
-Then, and every time you update your native dependencies, run:
+Benefits:
 
-```sh
-bundle exec pod install
+- Separation of concerns
+- Easy testing
+- Reusable API methods
+- Cleaner screens
+
+---
+
+## 🎨 Design Principles
+
+The application focuses on:
+
+- Clean Fintech UI
+- Dark Theme Experience
+- Reusable Components
+- Consistent Spacing System
+- Mobile-first Design
+- Smooth User Experience
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone git@github.com:YPATEL04/finflow-react-native.git
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Install Dependencies
 
-```sh
-# Using npm
-npm run ios
+```bash
+yarn
+```
 
-# OR using Yarn
+### Install iOS Pods
+
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### Run iOS
+
+```bash
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Run Android
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+yarn android
+```
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 📸 Screenshots
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Dashboard
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+(Add screenshot here)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Statistics
 
-## Congratulations! :tada:
+(Add screenshot here)
 
-You've successfully run and modified your React Native App. :partying_face:
+### Cards
 
-### Now what?
+(Add screenshot here)
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+### Profile
 
-# Troubleshooting
+(Add screenshot here)
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## 🎯 Skills Demonstrated
 
-To learn more about React Native, take a look at the following resources:
+This project showcases:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- React Native Development
+- TypeScript
+- Redux Toolkit
+- API Integration
+- Component Architecture
+- Navigation Architecture
+- Mobile UI Development
+- State Management
+- Reusable Component Design
+- Performance-Oriented Development
+- Clean Code Practices
+
+---
+
+## 🔮 Future Enhancements
+
+Planned improvements:
+
+- Authentication
+- Dark / Light Theme Support
+- Real Backend Integration
+- Expense Analytics
+- Savings Goals
+- Budget Alerts
+- Push Notifications
+- Biometric Authentication
+- Multi-Currency Support
+- Export Financial Reports
+
+---
+
+## 📈 Project Goals
+
+The goal of FinFlow is to simulate a production-grade fintech application while following industry-standard React Native development practices.
+
+---
+
+## 👨‍💻 Developer
+
+### Yash Hirapara
+
+React Native Developer
+
+Experienced in:
+
+- React Native
+- Fintech Applications
+- Mobile Architecture
+- API Integration
+- Performance Optimization
+
+### Connect With Me
+
+LinkedIn:
+(Add your LinkedIn URL)
+
+GitHub:
+(Add your GitHub URL)
+
+Email:
+(Add your Email)
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a star on GitHub.
+
+It helps increase visibility and supports continued development.
+
+---
+
+Made with ❤️ using React Native & TypeScript

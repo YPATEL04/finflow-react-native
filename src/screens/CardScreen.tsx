@@ -17,7 +17,7 @@ const CardScreen = () => {
       cardName: 'FinFlow Black',
       cardNumber: '4582',
       balance: 42850,
-      gradient: ['#57435C', '#130C2A'],
+      gradient: [COLORS.gradient1, '#130C2A'],
     },
     {
       id: '2',
@@ -25,7 +25,7 @@ const CardScreen = () => {
       cardName: 'FinFlow Virtual',
       cardNumber: '8721',
       balance: 8450,
-      gradient: ['#2A1B3D', '#57435C'],
+      gradient: ['#2A1B3D', COLORS.gradient1],
     },
     {
       id: '3',
