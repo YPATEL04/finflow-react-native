@@ -245,19 +245,30 @@ yarn android
 
 ### Dashboard
 
-(Add screenshot here)
+<p align="center">
+  <img src="./screenshots/Home_1.png" width="250" />
+  <img src="./screenshots/Home_2.png" width="250" />
+</p>
 
 ### Statistics
 
-(Add screenshot here)
+<p align="center">
+  <img src="./screenshots/Statistics_1.png" width="250" />
+  <img src="./screenshots/Statistics_2.png" width="250" />
+</p>
 
 ### Cards
 
-(Add screenshot here)
+<p align="center">
+  <img src="./screenshots/Cards.png" width="250" />
+</p>
 
 ### Profile
 
-(Add screenshot here)
+<p align="center">
+  <img src="./screenshots/Profile_1.png" width="250" />
+  <img src="./screenshots/Profile_2.png" width="250" />
+</p>
 
 ---
 
@@ -319,13 +330,10 @@ Experienced in:
 ### Connect With Me
 
 LinkedIn:
-(Add your LinkedIn URL)
-
-GitHub:
-(Add your GitHub URL)
+https://www.linkedin.com/in/yash-hirapara-4878b116a/
 
 Email:
-(Add your Email)
+yashhirpara947@gmail.com
 
 ---
 

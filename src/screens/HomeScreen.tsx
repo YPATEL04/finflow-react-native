@@ -70,7 +70,7 @@ const HomeScreen = () => {
         rightComponent={
           <TouchableOpacity>
             <MaterialCommunityIcons
-              name="notifications-outline"
+              name="bell-outline"
               size={24}
               color={COLORS.textColor}
             />
